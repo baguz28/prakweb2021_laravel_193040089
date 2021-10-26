@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //\App\Models\User::factory(10)->create();
+        
 
-        User::create([
+        /*User::create([
             'name' => 'Tito Bagus',
             'email' => 'tito@gmail.com',
             'password' => bcrypt('12345')
@@ -28,7 +28,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Abel',
             'email' => 'abel@gmail.com',
             'password' => bcrypt('12345')
-        ]);
+        ]);*/
+
+        User::factory(3)->create();
 
         Category::create([
             'name' => 'Web Programming',
@@ -40,6 +42,9 @@ class DatabaseSeeder extends Seeder
             'slug' => 'personal'
         ]);
 
+        Post::factory(20)->create();
+
+        /*
         Post::create([
             'title' => 'Judul Pertama',
             'slug' => 'judul-pertama',
@@ -75,5 +80,6 @@ class DatabaseSeeder extends Seeder
             'category_id' => 2,
             'user_id' => 2
         ]);
+        */
     }
 }
